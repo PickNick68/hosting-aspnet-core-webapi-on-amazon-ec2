@@ -7,6 +7,7 @@
   </PropertyGroup>
 
 	<PropertyGroup>
+		<IsPublishable>true</IsPublishable>
 		<EnableSdkContainerSupport>true</EnableSdkContainerSupport>
 		<ContainerRepository>products-crud-api</ContainerRepository>
 		<ContainerImageTags>latest</ContainerImageTags>
@@ -15,7 +16,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ContainerLabel Include="org.contoso.businessunit" Value="contoso-university" />
+		<ContainerLabel Include="Label" Value="products" />
 	</ItemGroup>
 
   <ItemGroup>
@@ -29,9 +30,12 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.NET.Build.Containers" Version="8.0.302" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="D:\Blazor\Helpers\8\Blazor.MediatR.Shared\Blazor.MediatR.Shared.csproj" />
   </ItemGroup>
 
 </Project>
